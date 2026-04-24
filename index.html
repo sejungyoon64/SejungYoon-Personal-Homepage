@@ -81,12 +81,12 @@
     section {
       padding: calc(var(--nav-h) + 64px) clamp(24px, 10vw, 160px) 80px;
       min-height: 100vh;
+      display: none;
     }
 
     section:not(#home) {
       padding-top: calc(var(--nav-h) + 48px);
       min-height: auto;
-      border-top: 1px solid var(--border);
     }
 
     /* ── HOME ── */
@@ -233,7 +233,7 @@
     /* ── RESEARCH ── */
     .research-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: 1fr 1fr;
       gap: 2px;
       margin-bottom: 56px;
     }
@@ -287,31 +287,32 @@
     .pub-group { margin-bottom: 48px; }
 
     .pub-group-title {
-      font-size: 0.72rem;
-      letter-spacing: 0.15em;
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--accent);
-      font-weight: 500;
-      margin-bottom: 20px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid var(--accent-light);
+      font-weight: 600;
+      margin-bottom: 24px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--accent-light);
     }
 
     .pub-item {
       padding: 24px 0;
       border-bottom: 1px solid var(--border);
       display: grid;
-      grid-template-columns: 48px 1fr;
-      gap: 16px;
-      align-start: start;
+      grid-template-columns: 80px 1fr;
+      gap: 24px;
+      align-items: start;
     }
 
     .pub-year {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 0.9rem;
+      font-size: 1.15rem;
       color: var(--muted);
       padding-top: 2px;
       font-style: italic;
+      min-width: 60px;
     }
 
     .pub-content {}
@@ -519,7 +520,7 @@
   </div>
   <div class="home-text fade-in">
     <p class="eyebrow">Independent Researcher · Seoul, South Korea</p>
-    <h1>Sejung<br>Yoon</h1>
+    <h1>Sejung Yoon</h1>
     <p class="home-bio">
       I am a sociologist studying why and how individuals engage in political activism and civic participation. My research focuses on the social-network, identity-based, and emotional mechanisms that bring people into civic and political life, with particular attention to social movements and gender politics in South Korea and the United States.
     </p>
@@ -577,7 +578,7 @@
     <p class="pub-group-title">Work in Progress</p>
 
     <div class="pub-item">
-      <span class="pub-year">—</span>
+      <span class="pub-year" style="font-style:normal; font-size:0.55rem; color:var(--accent-light); filter:brightness(0.75); padding-top:6px;">●</span>
       <div class="pub-content">
         <p class="pub-title"><strong>Yoon, S.J.</strong> "Bridging from Below: How Cross-Issue Engagement Shapes Movement Coalition." <span class="pub-status">Under Review</span></p>
         <p class="pub-meta"><em>Social Movement Studies</em></p>
@@ -585,14 +586,14 @@
     </div>
 
     <div class="pub-item">
-      <span class="pub-year">—</span>
+      <span class="pub-year" style="font-style:normal; font-size:0.55rem; color:var(--accent-light); filter:brightness(0.75); padding-top:6px;">●</span>
       <div class="pub-content">
         <p class="pub-title">Jarvis, J.A. &amp; <strong>Yoon, S.J.</strong> "Negotiating Failure: The Dynamic Trajectory of Academic Goal Adjustment." <span class="pub-status">In Progress</span></p>
       </div>
     </div>
 
     <div class="pub-item">
-      <span class="pub-year">—</span>
+      <span class="pub-year" style="font-style:normal; font-size:0.55rem; color:var(--accent-light); filter:brightness(0.75); padding-top:6px;">●</span>
       <div class="pub-content">
         <p class="pub-title">Lee, J.H., <strong>Yoon, S.J.</strong>, &amp; Shin, J.W. "Patterns and Dynamics of Identity Expansion among Young Women Participants in the Presidential Impeachment Protests in South Korea." <span class="pub-status">In Progress</span></p>
       </div>
@@ -771,37 +772,36 @@
 </footer>
 
 <script>
-  // Scroll-based nav highlighting
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-links a');
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        navLinks.forEach(a => {
-          a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id);
-        });
-      }
+  function showTab(id) {
+    sections.forEach(s => {
+      s.style.display = s.id === id ? 'block' : 'none';
     });
-  }, { rootMargin: '-40% 0px -55% 0px' });
-
-  sections.forEach(s => observer.observe(s));
-
-  // Fade-in on scroll
-  const fadeEls = document.querySelectorAll('.fade-in');
-  const fadeObs = new IntersectionObserver((entries) => {
-    entries.forEach((e, i) => {
-      if (e.isIntersecting) {
-        setTimeout(() => e.target.classList.add('visible'), i * 80);
-        fadeObs.unobserve(e.target);
-      }
+    if (id === 'home') {
+      document.querySelector('#home').style.display = 'grid';
+    }
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + id);
     });
-  }, { threshold: 0.1 });
+    // Trigger fade-ins for newly shown section
+    document.querySelectorAll('#' + id + ' .fade-in').forEach((el, i) => {
+      setTimeout(() => el.classList.add('visible'), i * 80);
+    });
+    window.scrollTo(0, 0);
+  }
 
-  fadeEls.forEach(el => fadeObs.observe(el));
+  navLinks.forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const id = a.getAttribute('href').replace('#', '');
+      showTab(id);
+    });
+  });
 
-  // Trigger first visible immediately
-  document.querySelectorAll('#home .fade-in').forEach(el => el.classList.add('visible'));
+  // Show home by default
+  showTab('home');
 </script>
 </body>
 </html>
