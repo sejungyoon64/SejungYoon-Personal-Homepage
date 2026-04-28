@@ -243,15 +243,28 @@
     }
 
     .research-card {
-      padding: 28px 0 28px 24px;
-      border-left: 2px solid var(--border);
-      border-bottom: none;
-      transition: border-color 0.2s;
-      margin-bottom: 20px;
+      display: grid;
+      grid-template-columns: 36px 1fr;
+      gap: 20px;
+      padding: 28px 16px;
+      border-bottom: 1px solid var(--border);
+      align-items: start;
+      border-radius: 2px;
+      transition: background 0.2s;
+      cursor: default;
     }
 
-    .research-card:hover {
-      border-left-color: var(--accent);
+    .research-card:first-child { border-top: 1px solid var(--border); }
+
+    .research-card:hover { background: var(--accent-light); }
+
+    .research-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-style: italic;
+      color: var(--accent);
+      line-height: 1;
+      padding-top: 2px;
     }
 
     .research-card h3 {
@@ -259,7 +272,7 @@
       font-size: 0.92rem;
       font-weight: 700;
       letter-spacing: 0.01em;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .research-card p {
@@ -650,16 +663,25 @@
 
   <div class="research-grid fade-in">
     <div class="research-card">
-      <h3>Pathways into Participation</h3>
-      <p>I study how individuals first become engaged in civic and political life, focusing on the emotional and experiential processes that shape entry into participation. My work examines how feelings toward marginalized groups, as well as formative experiences such as success, failure, and evaluation, influence how people develop and adjust their orientations toward action.</p>
+      <span class="research-num">1</span>
+      <div>
+        <h3>Pathways into Participation</h3>
+        <p>I study how individuals first become engaged in civic and political life, focusing on the emotional and experiential processes that shape entry into participation. My work examines how feelings toward marginalized groups, as well as formative experiences such as success, failure, and evaluation, influence how people develop and adjust their orientations toward action.</p>
+      </div>
     </div>
     <div class="research-card">
-      <h3>Networked and Individualized Participation</h3>
-      <p>I examine how participation becomes sustained, interconnected, and increasingly individualized in contemporary societies. My research explores how network-based forms of engagement enable individuals to move across issues and organizations, while also generating new challenges for collective coordination and movement organizations.</p>
+      <span class="research-num">2</span>
+      <div>
+        <h3>Networked and Individualized Participation</h3>
+        <p>I examine how participation becomes sustained, interconnected, and increasingly individualized in contemporary societies. My research explores how network-based forms of engagement enable individuals to move across issues and organizations, while also generating new challenges for collective coordination and movement organizations.</p>
+      </div>
     </div>
     <div class="research-card">
-      <h3>Political Cleavages and Collective Alignment</h3>
-      <p>I investigate how political divisions, particularly around gender, emerge and consolidate over time. Drawing on large-scale online community data, I use topic modeling and co-occurrence network analysis to trace how feminist and anti-feminist discourses developed from relatively separate conversations into a structured, mutually constitutive cleavage. This approach allows me to examine the conditions under which gender became a central axis of political polarization in South Korea.</p>
+      <span class="research-num">3</span>
+      <div>
+        <h3>Political Cleavages and Collective Alignment</h3>
+        <p>I investigate how political divisions, particularly around gender, emerge and consolidate over time. Drawing on large-scale online community data, I use topic modeling and co-occurrence network analysis to trace how feminist and anti-feminist discourses developed from relatively separate conversations into a structured, mutually constitutive cleavage. This approach allows me to examine the conditions under which gender became a central axis of political polarization in South Korea.</p>
+      </div>
     </div>
   </div>
 
@@ -667,7 +689,7 @@
     <p class="pub-group-title">Work in Progress</p>
 
     <div class="pub-item pub-item-bullet">
-      <span class="pub-year" style="font-style:normal; font-size:0.55rem; color:var(--accent-light); filter:brightness(0.75); padding-top:6px;">●</span>
+      <span class="pub-year" style="font-style:normal; font-size:0.5rem; color:var(--accent); padding-top:6px;">●</span>
       <div class="pub-content">
         <p class="pub-title"><strong>Yoon, S.J.</strong> "Bridging from Below: How Cross-Issue Engagement Shapes Movement Coalition." <span class="pub-status">Under Review</span></p>
         <p class="pub-meta"><em>Social Movement Studies</em></p>
@@ -675,14 +697,14 @@
     </div>
 
     <div class="pub-item pub-item-bullet">
-      <span class="pub-year" style="font-style:normal; font-size:0.55rem; color:var(--accent-light); filter:brightness(0.75); padding-top:6px;">●</span>
+      <span class="pub-year" style="font-style:normal; font-size:0.5rem; color:var(--accent); padding-top:6px;">●</span>
       <div class="pub-content">
         <p class="pub-title">Jarvis, J.A. &amp; <strong>Yoon, S.J.</strong> "Negotiating Failure: The Dynamic Trajectory of Academic Goal Adjustment." <span class="pub-status">In Progress</span></p>
       </div>
     </div>
 
     <div class="pub-item pub-item-bullet">
-      <span class="pub-year" style="font-style:normal; font-size:0.55rem; color:var(--accent-light); filter:brightness(0.75); padding-top:6px;">●</span>
+      <span class="pub-year" style="font-style:normal; font-size:0.5rem; color:var(--accent); padding-top:6px;">●</span>
       <div class="pub-content">
         <p class="pub-title">Lee, J.H., <strong>Yoon, S.J.</strong>, &amp; Shin, J.W. "Patterns and Dynamics of Identity Expansion among Young Women Participants in the Presidential Impeachment Protests in South Korea." <span class="pub-status">In Progress</span></p>
       </div>
