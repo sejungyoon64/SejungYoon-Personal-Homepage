@@ -305,21 +305,27 @@
       padding: 24px 0;
       border-bottom: 1px solid var(--border);
       display: grid;
-      grid-template-columns: 80px 1fr;
-      gap: 24px;
+      grid-template-columns: 68px 1fr;
+      gap: 14px;
       align-items: start;
     }
 
     .pub-year {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.15rem;
-      color: var(--muted);
-      padding-top: 2px;
+      color: #5a5249;
+      padding-top: 0px;
       font-style: italic;
-      min-width: 60px;
+      min-width: 52px;
+      line-height: 1.3;
     }
 
     .pub-content {}
+
+    .pub-item-bullet {
+      grid-template-columns: 20px 1fr;
+      gap: 10px;
+    }
 
     .pub-title {
       font-size: 0.92rem;
@@ -659,7 +665,7 @@
   <div class="pub-group fade-in" style="margin-top: 56px;">
     <p class="pub-group-title">Work in Progress</p>
 
-    <div class="pub-item">
+    <div class="pub-item pub-item-bullet">
       <span class="pub-year" style="font-style:normal; font-size:0.55rem; color:var(--accent-light); filter:brightness(0.75); padding-top:6px;">●</span>
       <div class="pub-content">
         <p class="pub-title"><strong>Yoon, S.J.</strong> "Bridging from Below: How Cross-Issue Engagement Shapes Movement Coalition." <span class="pub-status">Under Review</span></p>
@@ -667,14 +673,14 @@
       </div>
     </div>
 
-    <div class="pub-item">
+    <div class="pub-item pub-item-bullet">
       <span class="pub-year" style="font-style:normal; font-size:0.55rem; color:var(--accent-light); filter:brightness(0.75); padding-top:6px;">●</span>
       <div class="pub-content">
         <p class="pub-title">Jarvis, J.A. &amp; <strong>Yoon, S.J.</strong> "Negotiating Failure: The Dynamic Trajectory of Academic Goal Adjustment." <span class="pub-status">In Progress</span></p>
       </div>
     </div>
 
-    <div class="pub-item">
+    <div class="pub-item pub-item-bullet">
       <span class="pub-year" style="font-style:normal; font-size:0.55rem; color:var(--accent-light); filter:brightness(0.75); padding-top:6px;">●</span>
       <div class="pub-content">
         <p class="pub-title">Lee, J.H., <strong>Yoon, S.J.</strong>, &amp; Shin, J.W. "Patterns and Dynamics of Identity Expansion among Young Women Participants in the Presidential Impeachment Protests in South Korea." <span class="pub-status">In Progress</span></p>
@@ -686,7 +692,7 @@
     <p class="pub-group-title">Research Experience</p>
 
     <div class="pub-item">
-      <span class="pub-year">Jan. 2026 –<br>present</span>
+      <span class="pub-year" style="line-height:1.2;">Jan. 2026 –&thinsp;<br>present</span>
       <div class="pub-content">
         <p class="pub-title">Research Collaborator — "Crisis, Participation, and Reproduction of Korean Civil Society"</p>
         <p class="pub-meta">PI: Jung In Kim, Chuncheon National University of Education<br>Funded by June Democracy Forum (6월 민주포럼) &amp; Institute for Participatory Society (참여사회연구소)</p>
@@ -694,7 +700,7 @@
     </div>
 
     <div class="pub-item">
-      <span class="pub-year">Dec. 2025 –<br>present</span>
+      <span class="pub-year" style="line-height:1.2;">Dec. 2025 –&thinsp;<br>present</span>
       <div class="pub-content">
         <p class="pub-title">Research &amp; Administrative Assistant — Autonomous Major Selection Support Center</p>
         <p class="pub-meta">Hansung University</p>
