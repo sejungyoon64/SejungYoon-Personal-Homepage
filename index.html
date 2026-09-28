@@ -14,7 +14,7 @@
       --bg: #f7f4ef;
       --paper: #fdfcf9;
       --ink: #1c1a17;
-      --muted: #7a7369;
+      --muted: #5c554d;
       --accent: #a0626a;
       --accent-light: #ead8da;
       --border: #ddd9d1;
@@ -167,7 +167,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-bottom: 36px;
+      margin-bottom: 28px;
     }
 
     .tag {
@@ -204,7 +204,7 @@
       color: white;
     }
 
-    .btn-primary:hover { background: #7a4128; }
+    .btn-primary:hover { background: #83484f; }
 
     .btn-outline {
       border: 1px solid var(--border);
@@ -223,8 +223,8 @@
 
     h2 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 2.4rem;
-      font-weight: 400;
+      font-size: 2.8rem;
+      font-weight: 500;
       letter-spacing: -0.01em;
     }
 
@@ -244,8 +244,8 @@
 
     .research-card {
       display: grid;
-      grid-template-columns: 36px 1fr;
-      gap: 20px;
+      grid-template-columns: 1fr;
+      gap: 0;
       padding: 28px 16px;
       border-bottom: 1px solid var(--border);
       align-items: start;
@@ -269,14 +269,15 @@
 
     .research-card h3 {
       font-family: 'DM Sans', sans-serif;
-      font-size: 0.92rem;
-      font-weight: 700;
-      letter-spacing: 0.01em;
-      margin-bottom: 8px;
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: 0.005em;
+      color: var(--accent);
+      margin-bottom: 10px;
     }
 
     .research-card p {
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       color: var(--muted);
       line-height: 1.7;
       max-width: 680px;
@@ -310,14 +311,14 @@
     .pub-group { margin-bottom: 48px; }
 
     .pub-group-title {
-      font-size: 0.85rem;
+      font-size: 0.95rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--accent);
       font-weight: 600;
       margin-bottom: 24px;
       padding-bottom: 10px;
-      border-bottom: 2px solid var(--accent-light);
+      border-bottom: 2px solid var(--accent);
     }
 
     .pub-item {
@@ -347,7 +348,7 @@
     }
 
     .pub-title {
-      font-size: 0.92rem;
+      font-size: 0.95rem;
       font-weight: 500;
       line-height: 1.5;
       margin-bottom: 4px;
@@ -624,8 +625,16 @@
   </div>
   <div class="home-text fade-in">
     <h1>Sejung Yoon</h1>
+    <div class="tag-row">
+      <span class="tag">Political Sociology</span>
+      <span class="tag">Civic Engagement</span>
+      <span class="tag">Collective Action</span>
+      <span class="tag">Political Polarization</span>
+      <span class="tag">Social Networks</span>
+      <span class="tag">Computational Social Science</span>
+    </div>
     <p class="home-bio">
-      I am a sociologist studying civic engagement and collective action. My research follows three interconnected lines of inquiry: how individuals first enter civic and political life through emotional and experiential processes; how participation becomes sustained and increasingly individualized through networked forms of engagement; and how political cleavages, particularly around gender, emerge and shape collective alignment. I combine qualitative interviews, survey analysis, and computational approaches to study these dynamics.
+      I am a sociologist studying the relational foundations of political engagement: how ties to other people, groups, and organizations draw individuals into public life, and what happens to engagement when those ties are strained by division and distrust. My research has examined how emotional closeness toward social minorities is linked to political participation, and how activists moving across labor, feminist, and climate movements sustain coalitions from below. Building on this work, I ask when political differences make everyday conversation too costly to continue, and why declining trust in institutions leads some people to withdraw while drawing others into new forms of action.
     </p>
     <p class="home-bio">
       Outside of research, I enjoy running, working out, and reading Korean novels.
@@ -663,24 +672,21 @@
 
   <div class="research-grid fade-in">
     <div class="research-card">
-      <span class="research-num">1</span>
       <div>
-        <h3>Pathways into Participation</h3>
-        <p>I study how individuals first become engaged in civic and political life, focusing on the emotional and experiential processes that shape entry into participation. My work examines how feelings toward marginalized groups, as well as formative experiences such as success, failure, and evaluation, influence how people develop and adjust their orientations toward action.</p>
+        <h3>When Political Difference Becomes Distance</h3>
+        <p>I study how political polarization spills into everyday relationships and what interactional consequences it carries. I ask when political differences close off conversation among relatives, friends, and coworkers, and when ongoing ties sustain engagement across them. Related work examines how partisanship conditions the link between group affect and political action, and how gender has become an axis of division, using computational analysis of online communities to trace how misogynistic language broadened into generalized stigma.</p>
       </div>
     </div>
     <div class="research-card">
-      <span class="research-num">2</span>
       <div>
-        <h3>Networked and Individualized Participation</h3>
-        <p>I examine how participation becomes sustained, interconnected, and increasingly individualized in contemporary societies. My research explores how network-based forms of engagement enable individuals to move across issues and organizations, while also generating new challenges for collective coordination and movement organizations.</p>
+        <h3>How Distrust Redirects Participation</h3>
+        <p>I examine how the distribution of trust across institutions, organizations, and interpersonal relationships shapes civic participation. Rather than treating trust as a single resource, I ask why distrust in public institutions leads some citizens to withdraw and redirects others toward alternative forms of action, and how civic organizations mobilize support when their credibility is uncertain. This work draws on focus groups with activists across social movement, governance, and social economy sectors.</p>
       </div>
     </div>
     <div class="research-card">
-      <span class="research-num">3</span>
       <div>
-        <h3>Political Cleavages and Collective Alignment</h3>
-        <p>I investigate how political divisions, particularly around gender, emerge and consolidate over time. Drawing on large-scale online community data, I use topic modeling and co-occurrence network analysis to trace how feminist and anti-feminist discourses developed from relatively separate conversations into a structured, mutually constitutive cleavage. This approach allows me to examine the conditions under which gender became a central axis of political polarization in South Korea.</p>
+        <h3>How Relationships Shape Collective Action</h3>
+        <p>My earlier work examines the relational foundations of participation. I have studied how emotional closeness toward social minorities is associated with political participation, particularly among members of voluntary associations, and how activists moving across labor, feminist, and climate movements build coalitions from below through everyday translation, brokerage, and negotiation.</p>
       </div>
     </div>
   </div>
@@ -699,58 +705,74 @@
     <div class="pub-item pub-item-bullet">
       <span class="pub-year" style="font-style:normal; font-size:0.5rem; color:var(--accent); padding-top:6px;">●</span>
       <div class="pub-content">
-        <p class="pub-title">Jarvis, J.A. &amp; <strong>Yoon, S.J.</strong> "Negotiating Failure: The Dynamic Trajectory of Academic Goal Adjustment." <span class="pub-status">In Progress</span></p>
+        <p class="pub-title"><strong>Yoon, S.J.</strong>, Roh, S.M., &amp; Suh, C.S. "Evolving Hate? The Changing Face of Online Misogyny in South Korea, 2015–2025." <span class="pub-status">In Preparation</span></p>
       </div>
     </div>
 
     <div class="pub-item pub-item-bullet">
       <span class="pub-year" style="font-style:normal; font-size:0.5rem; color:var(--accent); padding-top:6px;">●</span>
       <div class="pub-content">
-        <p class="pub-title">Lee, J.H., <strong>Yoon, S.J.</strong>, &amp; Shin, J.W. "Patterns and Dynamics of Identity Expansion among Young Women Participants in the Presidential Impeachment Protests in South Korea." <span class="pub-status">In Progress</span></p>
+        <p class="pub-title"><strong>Yoon, S.J.</strong>, Jarvis, J.A., &amp; Lee, J.W. "Never Successful Enough: Failure Trajectories in South Korean Education." <span class="pub-status">In Preparation</span></p>
       </div>
     </div>
+
+    <div class="pub-item pub-item-bullet">
+      <span class="pub-year" style="font-style:normal; font-size:0.5rem; color:var(--accent); padding-top:6px;">●</span>
+      <div class="pub-content">
+        <p class="pub-title"><strong>Yoon, S.J.</strong> "Same Affect, Opposite Mobilization: Partisan Divergence in Political Action." <span class="pub-status">In Progress</span></p>
+      </div>
+    </div>
+
   </div>
 
   <div class="pub-group fade-in" style="margin-top: 56px;">
     <p class="pub-group-title">Research Experience</p>
 
     <div class="pub-item">
+      <span class="pub-year" style="line-height:1.2;">2026 –&thinsp;<br>present</span>
+      <div class="pub-content">
+        <p class="pub-title">Evolving Hate? The Changing Face of Online Misogyny in South Korea, 2015–2025</p>
+        <p class="pub-meta"><span style="color:var(--ink);font-weight:500;">Research Collaborator</span><br>With Seungmi Roh, Hallym University, and Chan S. Suh, Chung-Ang University<br>LDA topic modeling of a 42,945-post corpus from 14 Korean online communities</p>
+      </div>
+    </div>
+
+    <div class="pub-item">
       <span class="pub-year" style="line-height:1.2;">Jan. 2026 –&thinsp;<br>present</span>
       <div class="pub-content">
-        <p class="pub-title">Research Collaborator — "Crisis, Participation, and Reproduction of Korean Civil Society"</p>
-        <p class="pub-meta">PI: Jung In Kim, Chuncheon National University of Education<br>Funded by June Democracy Forum (6월 민주포럼) &amp; Institute for Participatory Society (참여사회연구소)</p>
+        <p class="pub-title">Crisis, Participation, and Reproduction of Korean Civil Society</p>
+        <p class="pub-meta"><span style="color:var(--ink);font-weight:500;">Research Collaborator</span><br>PI: Jung In Kim, Chuncheon National University of Education<br>Funded by June Democracy Forum (6월 민주포럼) &amp; Institute for Participatory Society (참여사회연구소)</p>
       </div>
     </div>
 
     <div class="pub-item">
       <span class="pub-year" style="line-height:1.2;">Dec. 2025 –&thinsp;<br>present</span>
       <div class="pub-content">
-        <p class="pub-title">Research &amp; Administrative Assistant — Autonomous Major Selection Support Center</p>
-        <p class="pub-meta">Hansung University</p>
+        <p class="pub-title">Student Success and Major Design Center, Hansung University</p>
+        <p class="pub-meta"><span style="color:var(--ink);font-weight:500;">Research &amp; Administrative Assistant</span></p>
       </div>
     </div>
 
     <div class="pub-item">
       <span class="pub-year">Dec. 2024 –<br>Jan. 2025</span>
       <div class="pub-content">
-        <p class="pub-title">Research Collaborator — "Protest Survey: Youth Demanding the Impeachment of President Yoon"</p>
-        <p class="pub-meta">Commissioned by 윤퇴청 (Youth Coalition for the Resignation of President Yoon)<br>Coded and analyzed survey data on gender, age, and civic motivations in youth participation</p>
+        <p class="pub-title">Protest Survey: Youth Demanding the Impeachment of President Yoon</p>
+        <p class="pub-meta"><span style="color:var(--ink);font-weight:500;">Research Collaborator</span><br>Commissioned by 윤퇴청 (Youth Coalition for the Resignation of President Yoon)<br>Coded and analyzed survey data on gender, age, and civic motivations in youth participation</p>
       </div>
     </div>
 
     <div class="pub-item">
-      <span class="pub-year">Dec. 2023 –<br>Feb. 2026</span>
+      <span class="pub-year">2023 –<br>2025</span>
       <div class="pub-content">
-        <p class="pub-title">Research Assistant — "Experiences of Success and Failure in Korean University Admissions"</p>
-        <p class="pub-meta">PI: Jonathan A. Jarvis, Brigham Young University</p>
+        <p class="pub-title">Experiences of Success and Failure in Korean University Admissions</p>
+        <p class="pub-meta"><span style="color:var(--ink);font-weight:500;">Research Assistant</span><br>PI: Jonathan A. Jarvis, Brigham Young University</p>
       </div>
     </div>
 
     <div class="pub-item">
       <span class="pub-year">Oct. 2021 –<br>May 2022</span>
       <div class="pub-content">
-        <p class="pub-title">Research Assistant — "New Currents in Korean Civil Society: A Qualitative Interview Study"</p>
-        <p class="pub-meta">PI: Jin-Wook Shin, Chung-Ang University<br>Funded by The Beautiful Foundation (아름다운재단)</p>
+        <p class="pub-title">A Qualitative Study on the Status of Korean Civil Society in the COVID-19 Era</p>
+        <p class="pub-meta"><span style="color:var(--ink);font-weight:500;">Research Assistant</span><br>PI: Jin-Wook Shin, Chung-Ang University<br>Funded by The Beautiful Foundation (아름다운재단)</p>
         <a class="pub-link" href="https://beautifulfund.org/84322/" target="_blank">→ View Report</a>
       </div>
     </div>
@@ -769,11 +791,11 @@
     <p class="pub-group-title">Peer-Reviewed Journal Articles</p>
 
     <div class="pub-item">
-      <span class="pub-year">2024</span>
+      <span class="pub-year">2026</span>
       <div class="pub-content">
-        <p class="pub-title"><strong>Yoon, S.J.</strong>, Lee, J.H., & Suh, C.S. "Emotional Pathway to Activism: Emotional Intimacy with Social Minorities and Engagement in Activism in South Korea."</p>
-        <p class="pub-meta"><em>Journal of Asian Sociology</em> 53(2): 127–149.</p>
-        <a class="pub-link" href="https://www.jstor.org/stable/27320233" target="_blank">→ JSTOR</a>
+        <p class="pub-title">Kwak, M., Kang, S.N., Kim, Y.A., Jung, Y., & <strong>Yoon, S.J.</strong> "An Analytical Study on the Operational Cases of Learning Analytics Systems in Korean Universities."</p>
+        <p class="pub-meta"><em>Korean Journal of Comparative Education</em> 36(1): 85–112.</p>
+        <a class="pub-link" href="http://dx.doi.org/10.20306/kces.2026.3.31.85" target="_blank">→ DOI</a>
       </div>
     </div>
 
@@ -787,11 +809,11 @@
     </div>
 
     <div class="pub-item">
-      <span class="pub-year">2026</span>
+      <span class="pub-year">2024</span>
       <div class="pub-content">
-        <p class="pub-title">Kwak, M., Kang, S.N., Kim, Y.A., Jung, Y., & <strong>Yoon, S.J.</strong> "An Analytical Study on the Operational Cases of Learning Analytics Systems in Korean Universities."</p>
-        <p class="pub-meta"><em>Korean Journal of Comparative Education</em> 36(1): 85–112.</p>
-        <a class="pub-link" href="http://dx.doi.org/10.20306/kces.2026.3.31.85" target="_blank">→ DOI</a>
+        <p class="pub-title"><strong>Yoon, S.J.</strong>, Lee, J.H., & Suh, C.S. "Emotional Pathway to Activism: Emotional Intimacy with Social Minorities and Engagement in Activism in South Korea."</p>
+        <p class="pub-meta"><em>Journal of Asian Sociology</em> 53(2): 127–149.</p>
+        <a class="pub-link" href="https://www.jstor.org/stable/27320233" target="_blank">→ JSTOR</a>
       </div>
     </div>
   </div>
@@ -816,6 +838,22 @@
   </div>
 
   <div class="pub-group fade-in">
+
+    <div class="pub-item">
+      <span class="pub-year">2026</span>
+      <div class="pub-content">
+        <p class="pub-title"><strong>Yoon, S.J.</strong>, Roh, S.M., &amp; Suh, C.S. "Evolving Hate? The Changing Face of Online Misogyny in South Korea, 2015–2025." <span class="pub-status">Accepted</span></p>
+        <p class="pub-meta">4th Congress of the East Asian Sociological Association &middot; Tokyo, Japan &middot; November</p>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-year">2026</span>
+      <div class="pub-content">
+        <p class="pub-title"><strong>Yoon, S.J.</strong>, &amp; Jarvis, J.A. "Never Successful Enough: Failure Trajectories in South Korean Education."</p>
+        <p class="pub-meta">13th Symposium of the Korean Inequality Research Network &middot; Seoul, Korea &middot; July</p>
+      </div>
+    </div>
 
     <div class="pub-item">
       <span class="pub-year">2025</span>
