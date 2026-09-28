@@ -652,8 +652,7 @@
     <li><a href="#research">Research</a></li>
     <li><a href="#publications">Publications</a></li>
     <li><a href="#presentations">Presentations</a></li>
-    <li><a href="#cv">CV</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="Sejung_Yoon_CV.pdf" target="_blank" rel="noopener">CV</a></li>
   </ul>
 </nav>
 
@@ -686,6 +685,9 @@
         </li>
       </ul>
     </div>
+    <p class="home-bio" style="margin-top: 8px;">
+      If you would like to talk about my research or have any questions, please reach out at <a href="mailto:sejungyoon64@gmail.com" style="color: var(--accent); text-decoration: none; font-weight: 500;">sejungyoon64@gmail.com</a>.
+    </p>
   </div>
 </section>
 
@@ -954,49 +956,6 @@
   </div>
 </section>
 
-<!-- CV -->
-<section id="cv">
-  <div class="section-header fade-in">
-    <h2>CV</h2>
-    <div class="section-line"></div>
-  </div>
-
-  <div class="fade-in" style="max-width: 480px;">
-    <p style="color: var(--muted); font-size: 0.93rem; line-height: 1.8; margin-bottom: 32px;">
-      My full curriculum vitae is available as a PDF.
-    </p>
-    <a href="Sejung_Yoon_CV.pdf" download class="btn btn-primary">↓ Download CV (PDF)</a>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="section-header fade-in">
-    <h2>Contact</h2>
-    <div class="section-line"></div>
-  </div>
-
-  <div class="contact-grid fade-in">
-    <div>
-      <p class="contact-intro">I welcome questions and conversations about research. Feel free to reach out about shared interests, collaboration, or anything related to my work.</p>
-      <div class="contact-item">
-        <div class="contact-icon">✉</div>
-        <div class="contact-detail">
-          <div style="font-weight:500; margin-bottom:2px;">Email</div>
-          <a href="mailto:sejungyoon64@gmail.com">sejungyoon64@gmail.com</a>
-        </div>
-      </div>
-      <div class="contact-item">
-        <div class="contact-icon">🔗</div>
-        <div class="contact-detail">
-          <div style="font-weight:500; margin-bottom:2px;">ORCID</div>
-          <a href="https://orcid.org/0009-0003-5249-9288" target="_blank">0009-0003-5249-9288</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- FOOTER -->
 <footer>
   <span>© 2026 Sejung Yoon</span>
@@ -1025,11 +984,17 @@
   }
 
   navLinks.forEach(a => {
+    if (!a.getAttribute('href').startsWith('#')) return;
     a.addEventListener('click', e => {
       e.preventDefault();
       const id = a.getAttribute('href').replace('#', '');
       showTab(id);
     });
+  });
+
+  document.querySelector('.nav-name').addEventListener('click', e => {
+    e.preventDefault();
+    showTab('home');
   });
 
   // Show home by default
