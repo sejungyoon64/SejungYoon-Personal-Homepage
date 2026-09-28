@@ -37,9 +37,7 @@
       position: fixed;
       top: 0; left: 0; right: 0;
       height: var(--nav-h);
-      background: rgba(247,244,239,0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
+      background: #1c1a17;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -52,7 +50,7 @@
       font-size: 1.1rem;
       font-weight: 700;
       letter-spacing: 0;
-      color: var(--ink);
+      color: #f7f4ef;
       text-decoration: none;
     }
 
@@ -64,17 +62,21 @@
 
     .nav-links a {
       text-decoration: none;
-      color: var(--muted);
-      font-size: 0.82rem;
+      color: #bdb6ac;
+      font-size: 0.85rem;
       font-weight: 500;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      transition: color 0.2s;
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
     }
 
-    .nav-links a:hover,
+    .nav-links a:hover { color: #f7f4ef; }
+
     .nav-links a.active {
-      color: var(--accent);
+      color: #e8b9bf;
+      border-bottom-color: #e8b9bf;
     }
 
     /* ── SECTIONS ── */
@@ -620,7 +622,22 @@
 
       .contact-grid { grid-template-columns: 1fr; }
 
-      .nav-links { gap: 20px; }
+      :root { --nav-h: 92px; }
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 8px;
+        padding: 0 16px;
+      }
+      .nav-links {
+        gap: 18px;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        scrollbar-width: none;
+      }
+      .nav-links::-webkit-scrollbar { display: none; }
       .nav-links a { font-size: 0.75rem; }
     }
   </style>
