@@ -6,7 +6,7 @@
   <title>Sejung Yoon | Sociologist</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;700&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -26,9 +26,9 @@
     body {
       background: var(--bg);
       color: var(--ink);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 15px;
-      line-height: 1.75;
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
       min-height: 100vh;
     }
 
@@ -117,7 +117,7 @@
     }
 
     .photo-placeholder {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Merriweather', serif;
       font-size: 5rem;
       font-weight: 300;
       color: var(--accent);
@@ -147,19 +147,19 @@
     }
 
     h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2.8rem, 5vw, 4.2rem);
-      font-weight: 300;
-      line-height: 1.1;
+      font-family: 'Merriweather', serif;
+      font-size: clamp(2.3rem, 4.2vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.15;
       letter-spacing: -0.01em;
       margin-bottom: 24px;
       color: var(--ink);
     }
 
     .home-bio {
-      color: var(--muted);
-      font-size: 0.95rem;
-      line-height: 1.8;
+      color: var(--ink);
+      font-size: 1rem;
+      line-height: 1.75;
       margin-bottom: 32px;
     }
 
@@ -213,6 +213,17 @@
 
     .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
 
+    .interests {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--accent);
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+
+    .interests .dot { color: var(--muted); margin: 0 3px; }
+    .interests .kw { white-space: nowrap; }
+
     /* ── SECTION HEADERS ── */
     .section-header {
       display: flex;
@@ -222,9 +233,9 @@
     }
 
     h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2.8rem;
-      font-weight: 500;
+      font-family: 'Merriweather', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
       letter-spacing: -0.01em;
     }
 
@@ -259,7 +270,7 @@
     .research-card:hover { background: var(--accent-light); }
 
     .research-num {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Merriweather', serif;
       font-size: 1.4rem;
       font-style: italic;
       color: var(--accent);
@@ -268,16 +279,16 @@
     }
 
     .research-card h3 {
-      font-family: 'DM Sans', sans-serif;
+      font-family: 'Merriweather', serif;
       font-size: 1.15rem;
-      font-weight: 600;
-      letter-spacing: 0.005em;
+      font-weight: 700;
+      letter-spacing: 0;
       color: var(--accent);
       margin-bottom: 10px;
     }
 
     .research-card p {
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       color: var(--muted);
       line-height: 1.7;
       max-width: 680px;
@@ -289,7 +300,7 @@
     }
 
     .research-methods h3 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Merriweather', serif;
       font-size: 1.1rem;
       font-weight: 500;
       margin-bottom: 16px;
@@ -325,14 +336,14 @@
       padding: 24px 0;
       border-bottom: 1px solid var(--border);
       display: grid;
-      grid-template-columns: 68px 1fr;
+      grid-template-columns: 92px 1fr;
       gap: 14px;
       align-items: start;
     }
 
     .pub-year {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.15rem;
+      font-family: 'Merriweather', serif;
+      font-size: 0.9rem;
       color: #5a5249;
       padding-top: 0px;
       font-style: italic;
@@ -452,10 +463,10 @@
     }
 
     .contact-intro {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.6rem;
+      font-family: 'Merriweather', serif;
+      font-size: 1.3rem;
       font-weight: 300;
-      line-height: 1.5;
+      line-height: 1.6;
       color: var(--ink);
       margin-bottom: 32px;
     }
@@ -625,14 +636,7 @@
   </div>
   <div class="home-text fade-in">
     <h1>Sejung Yoon</h1>
-    <div class="tag-row">
-      <span class="tag">Political Sociology</span>
-      <span class="tag">Civic Engagement</span>
-      <span class="tag">Collective Action</span>
-      <span class="tag">Political Polarization</span>
-      <span class="tag">Social Networks</span>
-      <span class="tag">Computational Social Science</span>
-    </div>
+    <p class="interests"><span class="kw">Political Sociology</span> <span class="dot">·</span> <span class="kw">Civic Engagement</span> <span class="dot">·</span> <span class="kw">Collective Action</span> <span class="dot">·</span> <span class="kw">Political Polarization</span> <span class="dot">·</span> <span class="kw">Social Networks</span> <span class="dot">·</span> <span class="kw">Computational Social Science</span></p>
     <p class="home-bio">
       I am a sociologist studying the relational foundations of political engagement: how ties to other people, groups, and organizations draw individuals into public life, and what happens to engagement when those ties are strained by division and distrust. My research has examined how emotional closeness toward social minorities is linked to political participation, and how activists moving across labor, feminist, and climate movements sustain coalitions from below. Building on this work, I ask when political differences make everyday conversation too costly to continue, and why declining trust in institutions leads some people to withdraw while drawing others into new forms of action.
     </p>
